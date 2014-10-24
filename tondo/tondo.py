@@ -67,7 +67,7 @@ class PingHandler(MainHandler):
 class IndexHandler(MainHandler):
     ''' Index Handler '''
     def get(self):
-        self.write()
+        self.write('')
 
 
 class Application(tornado.web.Application):
