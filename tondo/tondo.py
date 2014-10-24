@@ -64,10 +64,17 @@ class PingHandler(MainHandler):
         self.write(tornado.escape.json_encode({'ping': 'pong'}))
 
 
+class IndexHandler(MainHandler):
+    ''' Index Handler '''
+    def get(self):
+        self.write()
+
+
 class Application(tornado.web.Application):
     ''' Application class '''
     def __init__(self):
         handlers = [
+            (r'/', IndexHandler),
             (r'/tip/(\w+)', TipHandler),
             (r'/ping', PingHandler),
         ]

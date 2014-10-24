@@ -1,1 +1,1 @@
-web: gunicorn -w 4 main:app
+web: newrelic-admin run-program python main.py --port=$PORT
