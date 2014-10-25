@@ -55,7 +55,7 @@ class TipHandler(MainHandler):
                 'tip': tip,
             }))
             return
-        self.set_status(404)
+        self.send_error(404)
 
 
 class PingHandler(MainHandler):
