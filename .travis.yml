@@ -4,5 +4,6 @@ python:
 install: pip install -r requirements.txt
 script: nosetests --with-spec --spec-color
 deploy:
+  provider: heroku
   api_key:
     secure: FPFcnFti6fltl08jiNp9vVwQtPlRURufUEwDQiJTS0Gi7IRkf/p3U+wPBDREhyDBYQzWdvIXDysKoV3ULzc/werybWubI23eH36SxOuothUZg8fJB6p7V9lc0pZ2ddAxiVIBzVjaiOIMGtZeOVlU3Sej6Is7sdNlbNToweN2aqY=
