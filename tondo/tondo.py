@@ -79,7 +79,7 @@ class Application(tornado.web.Application):
             (r'/ping', PingHandler),
         ]
         settings = dict(
-            debug=True,
+            debug=False
         )
         self.tips_json = loadjsons()
         tornado.web.Application.__init__(self, handlers, **settings)
