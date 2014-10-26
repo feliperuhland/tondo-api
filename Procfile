@@ -1,1 +1,1 @@
-web: newrelic-admin run-program python tondo/tondo.py --port=$PORT
+web: python tondo/tondo.py --port=$PORT
