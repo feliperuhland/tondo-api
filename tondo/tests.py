@@ -9,8 +9,9 @@ class TestSequenceFunctions(unittest.TestCase):
 
     JSON_ITEMS = [
         'content',
+        'contributor',
         'type',
-        'author'
+        'url'
     ]
 
     def setUp(self):
@@ -19,7 +20,6 @@ class TestSequenceFunctions(unittest.TestCase):
     def test_json_integrity(self):
         for json_file in self.json:
             for item in self.json[json_file]:
-                # for field in item.keys():
                 self.assertListEqual(item.keys(), self.JSON_ITEMS)
 
 
