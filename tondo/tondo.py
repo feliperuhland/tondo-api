@@ -49,6 +49,19 @@ class MainHandler(tornado.web.RequestHandler):
         return self.application.tondos_json.keys()
 
 
+class RandomTondoHandler(MainHandler):
+    def get(self):
+        subject = random.choice(self.get_subjects())
+        tondo = self.get_tondo(subject)
+        if tondo:
+            self.write(tornado.escape.json_encode({
+                'timestamp': get_timestamp(),
+                'tondo': tondo,
+            }))
+            return
+        self.send_error(404)
+
+
 class TondoHandler(MainHandler):
     def get(self, subject):
         tondo = self.get_tondo(subject)
@@ -91,6 +104,7 @@ class Application(tornado.web.Application):
         handlers = [
             (r'/', IndexHandler),
             (r'/subject', SubjectHandler),
+            (r'/tondo', RandomTondoHandler),
             (r'/tondo/(\w+)', TondoHandler),
             (r'/ping', PingHandler),
         ]
