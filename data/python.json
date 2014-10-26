@@ -1,22 +1,26 @@
 [
     {
+        "content": "Use 4 spaces per indentation level.",
+        "contributor": "feliperuhland",
         "type": "indentation",
-        "author": "feliperuhland",
-        "content": "Use 4 spaces per indentation level."
+        "url": "http://legacy.python.org/dev/peps/pep-0008/#indentation"
     },
     {
+        "content": "The 4-space rule is optional for continuation lines.",
+        "contributor": "feliperuhland",
         "type": "indentation",
-        "author": "feliperuhland",
-        "content": "The 4-space rule is optional for continuation lines."
+        "url": "http://legacy.python.org/dev/peps/pep-0008/#indentation"
     },
     {
+        "content": "The closing brace/bracket/parenthesis on multi-line constructs may either line up under the first non-whitespace character of the last line of list or  it may be lined up under the first character of the line that starts the multi-line construct.",
+        "contributor": "feliperuhland",
         "type": "indentation",
-        "author": "feliperuhland",
-        "content": "The closing brace/bracket/parenthesis on multi-line constructs may either line up under the first non-whitespace character of the last line of list or  it may be lined up under the first character of the line that starts the multi-line construct."
+        "url": "http://legacy.python.org/dev/peps/pep-0008/#indentation"
     },
     {
-        "type": "pep8",
-        "author": "feliperuhland",
-        "content": "Limit all lines to a maximum of 79 characters."
+        "content": "Limit all lines to a maximum of 79 characters.",
+        "contributor": "feliperuhland",
+        "type": "maximum line length",
+        "url": "http://legacy.python.org/dev/peps/pep-0008/#maximum-line-length"
     }
 ]
