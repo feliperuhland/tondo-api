@@ -10,7 +10,7 @@ class TestSequenceFunctions(unittest.TestCase):
     JSON_ITEMS = [
         'content',
         'type',
-        'added_for'
+        'author'
     ]
 
     def setUp(self):
