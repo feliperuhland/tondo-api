@@ -40,19 +40,34 @@ class MainHandler(tornado.web.RequestHandler):
         )
         self.set_status(200)
 
-    def get_tip(self, subject):
-        subject_dict = self.application.tips_json.get(subject)
+    def get_tondo(self, subject):
+        subject_dict = self.application.tondos_json.get(subject)
         if subject_dict:
             return random.choice(subject_dict)
 
+    def get_subjects(self):
+        return self.application.tondos_json.keys()
 
-class TipHandler(MainHandler):
+
+class TondoHandler(MainHandler):
     def get(self, subject):
-        tip = self.get_tip(subject)
-        if tip:
+        tondo = self.get_tondo(subject)
+        if tondo:
             self.write(tornado.escape.json_encode({
                 'timestamp': get_timestamp(),
-                'tip': tip,
+                'tondo': tondo,
+            }))
+            return
+        self.send_error(404)
+
+
+class SubjectHandler(MainHandler):
+    def get(self):
+        subjects = self.get_subjects()
+        if subjects:
+            self.write(tornado.escape.json_encode({
+                'timestamp': get_timestamp(),
+                'susbjects': subjects,
             }))
             return
         self.send_error(404)
@@ -75,13 +90,14 @@ class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
             (r'/', IndexHandler),
-            (r'/tip/(\w+)', TipHandler),
+            (r'/subject', SubjectHandler),
+            (r'/tondo/(\w+)', TondoHandler),
             (r'/ping', PingHandler),
         ]
         settings = dict(
             debug=False
         )
-        self.tips_json = loadjsons()
+        self.tondos_json = loadjsons()
         tornado.web.Application.__init__(self, handlers, **settings)
 
 
