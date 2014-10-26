@@ -67,7 +67,7 @@ class SubjectHandler(MainHandler):
         if subjects:
             self.write(tornado.escape.json_encode({
                 'timestamp': get_timestamp(),
-                'susbjects': subjects,
+                'subjects': subjects,
             }))
             return
         self.send_error(404)
