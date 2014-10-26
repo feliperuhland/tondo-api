@@ -1,22 +1,22 @@
 [
     {
         "type": "indentation",
-        "author": "feliperuhland",
+        "contributor": "feliperuhland",
         "content": "Use 4 spaces per indentation level."
     },
     {
         "type": "indentation",
-        "author": "feliperuhland",
+        "contributor": "feliperuhland",
         "content": "The 4-space rule is optional for continuation lines."
     },
     {
         "type": "indentation",
-        "author": "feliperuhland",
+        "contributor": "feliperuhland",
         "content": "The closing brace/bracket/parenthesis on multi-line constructs may either line up under the first non-whitespace character of the last line of list or  it may be lined up under the first character of the line that starts the multi-line construct."
     },
     {
         "type": "pep8",
-        "author": "feliperuhland",
+        "contributor": "feliperuhland",
         "content": "Limit all lines to a maximum of 79 characters."
     }
 ]
