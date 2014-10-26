@@ -2,3 +2,9 @@ tondo-api [![Build Status](https://travis-ci.org/feliperuhland/tondo-api.png?bra
 =========
 
 Work in progress... ;D
+
+endpoints:
+
+- /tondo/<subject> (ex: /tondo/python)
+- /subject
+- /ping
